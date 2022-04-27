@@ -1,8 +1,8 @@
 // Import builtin NodeJS modules to instantiate the service
 const https = require("https");
 const fs = require("fs");
-// require('dotenv')
-const PORT=process.env.PORT||4001
+require('dotenv')
+const PORT=process.env.PORT||443
 
 // Import the express module
 const express = require("express");
@@ -20,7 +20,7 @@ https
   .createServer(options, app)
   .listen(PORT, ()=>{
     // console.log({options})16
-    console.log(`server is runing at port ${PORT}`)
+    console.log(`server is runing at :${PORT}`)
   });
 
 // Create an try point route for the Express app listening on port 4000.
